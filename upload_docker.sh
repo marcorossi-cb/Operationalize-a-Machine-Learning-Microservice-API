@@ -6,12 +6,11 @@
 # Step 1:
 # Create dockerpath
 dockerpath=marcorossicb
-password=Docker1996.
 
 # Step 2:  
 # Authenticate & tag
-docker login --username $dockerpath -p $password
 echo "Docker ID and Image: $dockerpath"
+docker login --username $dockerpath
 docker tag app-udacity $dockerpath/app-udacity
 
 # Step 3:
