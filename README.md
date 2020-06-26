@@ -26,8 +26,7 @@ brew cask install minikube
 - config.yml: CircleCI configuration file for running the tests
 - app.py: Python flask app that serves out predictions (inference) about housing prices through API calls
 - Dockerfile: Dockerfile for building the image
-- make_prediction.sh: Send a request to the Python flask app to get a prediction, for localhost
-- make_prediction2.sh: Send a request to the Python flask app to get a prediction, for minikube kubernetes
+- make_prediction.sh: Send a request to the Python flask app to get a prediction
 - Makefile: includes instructions on environment setup and lint tests
 - run_docker.sh: file to be able to get Docker running, locally
 - run_kubernetes.sh: file to run the app in kubernetes
@@ -49,7 +48,7 @@ minikube start
 
 3. After you’ve called run_kubernetes.sh, and a pod is up and running, make a prediction using a separate terminal tab and run 
 ```
-./make_prediction2.sh
+./make_prediction.sh
 ```
 
 4. Delete the cluster
